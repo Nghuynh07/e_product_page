@@ -35,9 +35,7 @@ export default createGlobalStyle`
         --white:  hsl(0, 0%, 100%);
 
         ---black: hsl(0, 0%, 0%);
-
-
-        font-family: 'Kumbh Sans', sans-serif;;
+        --font-family: "Kumbh Sans", sans-serif;
     }
 
     img {
