@@ -2,11 +2,13 @@ import {
   ProductSC,
   ProductContainerSc,
 } from "../stylesComponents/Product.style";
-
-const Product = () => {
+import Gallery from "./Gallery";
+const Product = ({ isTrue }) => {
   return (
     <ProductSC>
-      <ProductContainerSc>Product</ProductContainerSc>
+      <ProductContainerSc>
+        <Gallery isTrue={isTrue} />
+      </ProductContainerSc>
     </ProductSC>
   );
 };

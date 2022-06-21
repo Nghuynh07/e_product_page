@@ -43,7 +43,6 @@ export const Logo = styled.div`
 
 // Links
 export const NavLinks = styled.div`
-  /* display: none; */
   font-family: "Kumbh Sans", sans-serif;
   position: absolute;
   top: 0;
@@ -58,9 +57,10 @@ export const NavLinks = styled.div`
   min-height: 100vh;
   transform: ${(props) =>
     props.isTrue ? `translateX(0)` : `translateX(-100%)`};
-
   @media (prefers-reduced-motion: no-preference) {
+    will-change: transform;
     transition: transform 0.2s ease-in-out;
+    transition-delay: 100ms;
   }
   & a {
     text-transform: capitalize;
@@ -89,9 +89,14 @@ export const NavOverlay = styled.div`
   width: 100%;
   height: 100vh;
   transform: ${(props) =>
-    props.isTrue ? `translateX(0)` : `translateX(-100%)`};
+    props.isTrue
+      ? `scale(1)`
+      : `scale
+  (0)`};
   background-color: rgba(0 0 0 / 0.75);
+
   @media (prefers-reduced-motion: no-preference) {
     transition: transform 0.2s ease-in-out;
+    transition-delay: 25ms;
   }
 `;

@@ -28,6 +28,7 @@ export const CartItems = styled.div`
   right: 50%;
   transform: translateX(20.7%);
   background-color: lightgray;
+  display: none;
 `;
 
 export const CartItem = styled.div``;

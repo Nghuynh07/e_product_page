@@ -20,9 +20,7 @@ import cart from "../images/icon-cart.svg";
 import profile from "../images/image-avatar.png";
 import close from "../images/icon-close.svg";
 
-const Nav = () => {
-  const [isTrue, setIsTrue] = useState(false);
-
+const Nav = ({ isTrue, setIsTrue }) => {
   const toggleMenu = () => {
     setIsTrue(!isTrue);
   };
@@ -30,7 +28,7 @@ const Nav = () => {
   return (
     <NavSC>
       <NavContainerSC>
-        {isTrue && <NavOverlay isTrue={isTrue} />}
+        {isTrue ? <NavOverlay isTrue={isTrue} /> : null}
         <Menu onClick={toggleMenu}>
           {isTrue ? (
             <img src={close} alt='X Icon to close menu' />
