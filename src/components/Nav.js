@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   NavSC,
   NavContainerSC,
@@ -28,7 +27,7 @@ const Nav = ({ isTrue, setIsTrue }) => {
   return (
     <NavSC>
       <NavContainerSC>
-        {isTrue ? <NavOverlay isTrue={isTrue} /> : null}
+        {isTrue ? <NavOverlay isTrue={isTrue} onClick={toggleMenu} /> : null}
         <Menu onClick={toggleMenu}>
           {isTrue ? (
             <img src={close} alt='X Icon to close menu' />
