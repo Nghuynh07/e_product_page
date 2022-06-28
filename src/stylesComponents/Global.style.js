@@ -43,4 +43,10 @@ export default createGlobalStyle`
     }
     
 
+    body {
+        @media (min-width:90rem) {
+            padding: 0 calc((100% - 1440px) / 2);
+        }
+    }
+
 `;

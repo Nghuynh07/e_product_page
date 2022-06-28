@@ -2,11 +2,20 @@ import styled from "styled-components";
 
 export const InfosSC = styled.div`
   font-family: var(--font-family);
+  @media (min-width: 90rem) {
+    display: grid;
+  }
 `;
 export const InfosContainerSC = styled.div`
   padding: 25px var(--mobile-padding) 0 var(--mobile-padding);
   display: grid;
   row-gap: 15px;
+
+  @media (min-width: 90rem) {
+    max-width: calc(445rem / 16);
+    min-height: calc(426rem / 16);
+    align-self: center;
+  }
 `;
 
 export const CompanySC = styled.p`
