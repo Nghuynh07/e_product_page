@@ -16,7 +16,23 @@ import {
 } from "../stylesComponents/Infos.style";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
+import { useState } from "react";
+import { useEffect } from "react";
 const Infos = () => {
+  const [quantity, setQuantity] = useState(0);
+
+  const decrement = () => {
+    setQuantity((current) => current - 1);
+  };
+
+  const increment = () => {
+    setQuantity((current) => current + 1);
+  };
+
+  useEffect(() => {
+    document.querySelector(".quantity").textContent = quantity;
+  }, [quantity]);
+
   return (
     <InfosSC>
       <InfosContainerSC>
@@ -34,11 +50,15 @@ const Infos = () => {
         </Pricing>
         <AddToCart>
           <AddItem>
-            <Button>
+            <Button
+              className={quantity === 0 ? "btnIsDisabled" : null}
+              onClick={decrement}
+              disabled={quantity === 0}
+            >
               <img src={minus} alt='Minus Icon' />
             </Button>
-            <Quantity>3</Quantity>
-            <Button>
+            <Quantity>{quantity}</Quantity>
+            <Button onClick={increment}>
               <img src={plus} alt='Plus Icon' />
             </Button>
           </AddItem>

@@ -49,4 +49,17 @@ export default createGlobalStyle`
         }
     }
 
+    .btnIsDisabled {
+        opacity: 0.4
+    }
+
+
+    .isActive {
+        border: 2px solid var(--orange);
+        filter: brightness(0.9) contrast(150%);
+        opacity: .3;
+        @media (prefers-reduced-motion: no-preference) {
+            transition: border 75ms ease-in, filter 75ms ease-in;
+        }
+    }
 `;

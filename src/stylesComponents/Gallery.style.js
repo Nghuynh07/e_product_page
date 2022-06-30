@@ -12,6 +12,8 @@ export const GallerySC = styled.div`
 export const GalleryContainerSC = styled.div`
   display: grid;
   overflow: hidden;
+  border-radius: 15px;
+  overflow: hidden;
   @media (min-width: 90rem) {
   }
 `;
@@ -25,13 +27,13 @@ export const ImgSC = styled.div`
   @media (min-width: 90rem) {
     max-width: calc(445rem / 16);
     min-height: calc(445rem / 16);
-    border-radius: 15px;
-    overflow: hidden;
+    cursor: pointer;
   }
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
   }
 `;
 
@@ -73,13 +75,26 @@ export const ThumbNails = styled.div`
 `;
 
 export const ThumbNail = styled.div`
-  width: 88px;
-  height: 88px;
-  border-radius: 15px;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  @media (min-width: 90rem) {
+    width: 88px;
+    height: 88px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    @media (prefers-reduced-motion: no-preference) {
+      &:hover {
+        transition: opacity 75ms ease-out;
+        opacity: 0.3;
+        img {
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
   }
 `;

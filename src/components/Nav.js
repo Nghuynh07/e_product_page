@@ -52,7 +52,7 @@ const Nav = ({ isTrue, setIsTrue }) => {
           <CartLogo>
             <img src={cart} alt='Cart Icon' />
           </CartLogo>
-          <span>3</span>
+          <span className='quantity'>0</span>
         </Cart>
         <Profile>
           <img src={profile} alt='Profile Icon' />

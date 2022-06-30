@@ -66,11 +66,20 @@ export const NavLinks = styled.div`
     text-transform: capitalize;
     font-weight: bold;
     color: var(--very-dark-blue);
-
+    position: relative;
     @media (min-width: 90rem) {
       font-family: "Kumbh Sans", sans-serif;
       font-weight: normal;
       color: var(--dark-grayish-blue);
+      /* &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: var(--orange);
+        bottom: -2.85rem;
+        opacity: 0;
+      } */
     }
   }
 
